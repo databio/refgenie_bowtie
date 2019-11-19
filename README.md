@@ -1,15 +1,12 @@
 # Databio genomes overview
 
-This repository contains necessary files to build and archive reference genome assets to serve with [`refgenieserver`](https://github.com/databio/refgenieserver). 
+This repository contains necessary files to build and archive reference genome assets to serve with [`refgenieserver`](https://github.com/databio/refgenieserver). The whole process is scripted, starting from this repository. From here, we download the input data (FASTA files), use `refgenie build` to create all of these assets in a local refgenie instance, and then use `refgenieserver archive` to build the server archives, and finally serve them with a refgenieserver instance by calling `refgenieserver serve`.
 
-The whole process is scripted, starting from this repository. From here, we download the input data (FASTA files, GTF files etc.), use `refgenie build` to create all of these assets in a local refgenie instance, and then use `refgenieserver archive` to build the server archives, and finally serve them with a refgenieserver instance by calling `refgenieserver serve`.
+# How to add an asset
 
-Subdirectories have more information:
+First, add a new genome, add a line in the `genomes.csv` file. Make sure to include a URL to a remote location where the FASTA file is stored. Then, add a line in `assets.csv` for each asset you want built for that genome.
 
-- [build_pep](build_pep)
-- [archive_pep](archive_pep)
-
-# How to build and serve the refgenie assets
+# How to build and serve the assets
 
 ## 1. Download the remote data
 
