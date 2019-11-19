@@ -1,0 +1,13 @@
+sample_name,asset
+hg38,fasta
+hg19,fasta
+hg38_chr22,fasta
+mm10,fasta
+hg38,bowtie_index
+hg19,bowtie_index
+hg38_chr22,bowtie_index
+mm10,bowtie_index
+hg38,bowtie2_index
+hg19,bowtie2_index
+hg38_chr22,bowtie2_index
+mm10,bowtie2_index

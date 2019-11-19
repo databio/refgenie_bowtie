@@ -1,0 +1,5 @@
+sample_name,genome,tag,fasta,,ensembl_gtf
+hg38,hg38,,ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz,,ftp://ftp.ensembl.org/pub/release-97/gtf/homo_sapiens/Homo_sapiens.GRCh38.97.gtf.gz
+hg19,hg19,,http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.fa.gz,,ftp://ftp.ensembl.org/pub/grch37/current/gtf/homo_sapiens/Homo_sapiens.GRCh37.87.gtf.gz
+mm10,mm10,,ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/635/GCA_000001635.5_GRCm38.p3/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001635.5_GRCm38.p3_no_alt_analysis_set.fna.gz,,ftp://ftp.ensembl.org/pub/release-97/gtf/mus_musculus/Mus_musculus.GRCm38.97.gtf.gz
+hg38_chr22,hg38_chr22,,ftp://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/CHR_22/hs_ref_GRCh38.p12_chr22.fa.gz,,
