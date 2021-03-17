@@ -6,38 +6,132 @@ This repository contains necessary files to build and archive reference genome a
 
 First, add a new genome, add a line in the [genomes.csv](assets_pep/genomes.csv) file. Make sure to include a URL to a remote location where the FASTA file is stored. Then, add a line in [assets.csv](assets_pep/assets.csv) for each asset you want built for that genome.
 
-# How to build and serve the assets
+# Deploying assets onto the server
 
-## 1. Download the remote data
+## Setup
 
-We have to have the fasta files locally. In the `genomes.csv` file, we have entered these files as remote URLs, so the first step is to download them. We have created a subproject called `getfasta` that does these downloads. So, first run this subproject:
+In this guide we'll use environment variables to keep track of where stuff goes.
 
-```
-looper run assets_pep/refgenie_build_cfg.yaml --sp getfasta
-```
-
-Now, all the files should be downloaded and named in the appropriate input folder. 
-
-## 2. Build assets
-
-Once files are present locally, we can run `refgenie build` on each genome for all assets like this:
+- `BASEDIR` points to our parent folder where we'll do all the building/archiving
+- `GENOMES` points to pipeline output (referenced in the project config)
+- `REFGENIE_RAW` points to a folder where the downloaded raw files are kept
+- `REFGENIE` points to the refgenie config file
+- `REFGENIE_ARCHIVE` points to the location where we'll store the actual archives
 
 ```
-looper run build_pep/refgenie_build_cfg.yaml
+export SERVERNAME=refgenie_bowtie
+export BASEDIR=$PROJECT/deploy/$SERVERNAME
+export BASEDIR=$HOME/refgenie_test # For local testing
+
+export GENOMES=$BASEDIR/genomes
+export REFGENIE_RAW=$BASEDIR/refgenie_$SERVERNAME
+export REFGENIE=$BASEDIR/$SERVERNAME/config/refgenie_config.yaml
+export REFGENIE_ARCHIVE=$GENOMES/archive
+mkdir -p $BASEDIR
+cd $BASEDIR
 ```
 
-This will create one job for each genome, building all assets in order for that job.
-
-## 3. Archive assets
-
-Assets are built locally now, but to serve them, we must archive them using `refgenieserver`.
+To start, clone this repository:
 
 ```
-refgenieserver archive -c $REFGENIE
+cp -R $CODE/$SERVERNAME # For local testing
+<!-- git clone git@github.com:refgenie/$SERVERNAME.git -->
 ```
 
-## 4. Serve assets
+## Step 1: Download input files
+
+Many of the assets require some input files, and we have to make sure we have those files locally. In the `recipe_inputs.csv` file, we have entered these files as remote URLs, so the first step is to download them. We have created a subproject called `getfiles` for this: To programmatically download all the files required by `refgenie build`, run from this directory using [looper](http://looper.databio.org):
 
 ```
-refgenieserver serve genomes.yaml
+cd $SERVERNAME
+mkdir -p $REFGENIE_RAW
+looper run asset_pep/refgenie_build_cfg.yaml -p local --amend getfiles --sel-attr asset --sel-incl fasta
+```
+
+Check the status with `looper check --use-pipesat`:
+
+*`--use-pipesat` option is required as of early 2021. Might not be required if you're running later on.*
+
+```
+looper check asset_pep/refgenie_build_cfg.yaml --amend getfiles --sel-attr asset --sel-incl fasta --use-pipestat
+```
+
+## Step 2: Refgenie genome configuration file initialization
+
+This repository comes with files genome cofiguration file already defined in [`\config`](config) directory, but if you have not initialized refgenie yet or want to start over, then first you can initialize the config like this:
+
+```
+refgenie init -c config/refgenie_config.yaml -f $GENOMES -u http://awspds.refgenie.databio.org/refgenomes.databio.org/ -a $GENOMES/archive -b refgenie_config_archive.yaml
+```
+
+## Step 3: Build assets
+
+Once files are present locally, we can run `refgenie build` on each asset specified in the sample_table (`assets.csv`). We have to submit fasta assets first:
+
+```
+looper run asset_pep/refgenie_build_cfg.yaml -p bulker_slurm --sel-attr asset --sel-incl fasta
+```
+
+This will create one job for each *asset*. Monitor job progress with: 
+
+```
+grep CANCELLED ../genomes/submission/*.log
+ll ../genomes/submission/*.log
+grep error ../genomes/submission/*.log
+grep maximum ../genomes/submission/*.log
+
+ll ../genomes/data/*/*/*/_refgenie_build/*.flag
+ll ../genomes/data/*/*/*/_refgenie_build/*failed.flag
+ll ../genomes/data/*/*/*/_refgenie_build/*completed.flag
+ll ../genomes/data/*/*/*/_refgenie_build/*running.flag
+ll ../genomes/data/*/*/*/_refgenie_build/*completed.flag | wc -l
+cat ../genomes/submission/*.log
+```
+
+To run all the asset types:
+
+```
+looper run asset_pep/refgenie_build_cfg.yaml -p bulker_slurm
+```
+
+## Step 4. Archive assets
+
+Assets are built locally now, but to serve them, we must archive them using `refgenieserver`. The general command is `refgenieserver archive -c <path/to/genomes.yaml>`. Since the archive process is generally lengthy, it makes sense to submit this job to a cluster. We can use looper to do that. 
+
+To start over completely, remove the archive config file with: 
+
+``` 
+rm config/refgenie_config_archive.yaml
+```
+
+Then submit the archiving jobs with `looper run`
+
+```
+looper run asset_pep/refgenieserver_archive_cfg.yaml -p bulker_local --sel-attr asset --sel-incl fasta
+```
+
+Check progress with:
+
+```
+ll ../genomes/archive_logs/submission/*.log
+grep Wait ../genomes/archive_logs/submission/*.log
+grep Error ../genomes/archive_logs/submission/*.log
+cat ../genomes/archive_logs/submission/*.log
+```
+
+## Step 5. Upload archives to S3
+
+Now the archives should be built, so we'll sync them to AWS. Use the refgenie credentials (here added with `--profile refgenie`, which should be preconfigured with `aws configure`)
+
+
+```
+aws s3 sync $REFGENIE_ARCHIVE s3://awspds.refgenie.databio.org/refgenomes.databio.org/ --profile refgenie
+```
+
+## Step 6. Deploy server 
+
+Now everything is ready to deploy. If using refgenieserver directly, you'll run `refgenieserver serve config/refgenieserver_archive_cfg`. We're hosting this repository on AWS and use GitHub Actions to trigger  trigger deploy jobs to push the updates to AWS ECS whenever a change is detected in the config file. 
+
+```
+ga -A; gcm "Deploy to ECS"; gpoh
 ```

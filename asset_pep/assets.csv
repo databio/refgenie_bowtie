@@ -1,0 +1,9 @@
+genome,asset,tag
+hg38,fasta,default
+hg19,fasta,default
+hg38_chr22,fasta,default
+mm10,fasta,default
+hg38,bowtie2_index,default
+hg19,bowtie2_index,default
+hg38_chr22,bowtie2_index,default
+mm10,bowtie2_index,default
