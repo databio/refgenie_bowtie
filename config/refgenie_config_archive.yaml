@@ -33,6 +33,11 @@ genomes:
               bowtie2_index: 2230c535660fb4774114bfa966a62f823fdb6d21acf138d4
             asset_parents: 
              - 2230c535660fb4774114bfa966a62f823fdb6d21acf138d4/fasta:default
+            archive_digest: a9f3db51db616f07917a8d355a2e1116
+            archive_size: 3.5GB
+            asset_size: 3.9GB
+            asset_children: []
+            legacy_archive_digest: b7fc6da6db0eb29f31ccdd76a9ce1767
         default_tag: default
     aliases: 
      - hg38
@@ -67,6 +72,11 @@ genomes:
               bowtie2_index: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c
             asset_parents: 
              - baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c/fasta:default
+            archive_digest: 779dac9b0171184d4eb79ff6b7e2c0a9
+            archive_size: 3.5GB
+            asset_size: 3.8GB
+            asset_children: []
+            legacy_archive_digest: 8bac52d23add3e1646101782328253b4
         default_tag: default
     aliases: 
      - hg19
@@ -101,6 +111,11 @@ genomes:
               bowtie2_index: fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7
             asset_parents: 
              - fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7/fasta:default
+            archive_digest: 2374e9a400dc32f709835a9ed27d0848
+            archive_size: 52.6MB
+            asset_size: 65.7MB
+            asset_children: []
+            legacy_archive_digest: a6f1a77a8d3baddb3ad0bb8960c8b298
         default_tag: default
     aliases: 
      - hg38_chr22
@@ -135,6 +150,11 @@ genomes:
               bowtie2_index: 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1
             asset_parents: 
              - 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1/fasta:default
+            archive_digest: fcef519a6e61fb80c804c3e30257699c
+            archive_size: 3.1GB
+            asset_size: 3.5GB
+            asset_children: []
+            legacy_archive_digest: 724e76406f23ad68f1792e5cc271323c
         default_tag: default
     aliases: 
      - mm10
