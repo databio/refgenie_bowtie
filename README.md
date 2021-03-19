@@ -4,7 +4,9 @@ This repository contains necessary files to build and archive reference genome a
 
 # How to add an asset
 
-First, add a new genome, add a line in the [genomes.csv](assets_pep/genomes.csv) file. Make sure to include a URL to a remote location where the FASTA file is stored. Then, add a line in [assets.csv](assets_pep/assets.csv) for each asset you want built for that genome.
+1. Add a line for each genome in [genome_descriptions.csv](asset_pep/genome_descriptions.csv).
+2. Add a line for each asset in [assets.csv](asset_pep/assets.csv).
+3. Add any required build inputs (links to files, parameters, etc) to [recipe_inputs.csv](asset_pep/recipe_inputs.csv)
 
 # Deploying assets onto the server
 
