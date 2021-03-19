@@ -19,7 +19,7 @@ In this guide we'll use environment variables to keep track of where stuff goes.
 - `REFGENIE_ARCHIVE` points to the location where we'll store the actual archives
 
 ```
-export SERVERNAME=refgenie_bowtie
+export SERVERNAME=btref.databio.org
 export BASEDIR=$PROJECT/deploy/$SERVERNAME
 export BASEDIR=$HOME/refgenie_test # For local testing
 
@@ -34,7 +34,7 @@ cd $BASEDIR
 To start, clone this repository:
 
 ```
-cp -R $CODE/$SERVERNAME # For local testing
+cp -R $CODE/$SERVERNAME . # For local testing
 <!-- git clone git@github.com:refgenie/$SERVERNAME.git -->
 ```
 
@@ -58,7 +58,7 @@ looper check asset_pep/refgenie_build_cfg.yaml --amend getfiles --sel-attr asset
 
 ## Step 2: Refgenie genome configuration file initialization
 
-This repository comes with files genome cofiguration file already defined in [`\config`](config) directory, but if you have not initialized refgenie yet or want to start over, then first you can initialize the config like this:
+This repository comes with a genome configuration file already defined in [`\config`](config) directory, but if you have not initialized refgenie yet or want to start over, then first you can initialize the config like this:
 
 ```
 refgenie init -c config/refgenie_config.yaml -f $GENOMES -u http://awspds.refgenie.databio.org/refgenomes.databio.org/ -a $GENOMES/archive -b refgenie_config_archive.yaml
@@ -69,7 +69,7 @@ refgenie init -c config/refgenie_config.yaml -f $GENOMES -u http://awspds.refgen
 Once files are present locally, we can run `refgenie build` on each asset specified in the sample_table (`assets.csv`). We have to submit fasta assets first:
 
 ```
-looper run asset_pep/refgenie_build_cfg.yaml -p bulker_slurm --sel-attr asset --sel-incl fasta
+looper run asset_pep/refgenie_build_cfg.yaml -p bulker_local --sel-attr asset --sel-incl fasta
 ```
 
 This will create one job for each *asset*. Monitor job progress with: 
@@ -91,7 +91,7 @@ cat ../genomes/submission/*.log
 To run all the asset types:
 
 ```
-looper run asset_pep/refgenie_build_cfg.yaml -p bulker_slurm
+looper run asset_pep/refgenie_build_cfg.yaml -p bulker_local
 ```
 
 ## Step 4. Archive assets
