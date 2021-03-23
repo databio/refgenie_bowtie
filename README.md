@@ -127,7 +127,7 @@ Now the archives should be built, so we'll sync them to AWS. Use the refgenie cr
 
 
 ```
-aws s3 sync $REFGENIE_ARCHIVE s3://awspds.refgenie.databio.org/refgenomes.databio.org/ --profile refgenie
+aws s3 sync $REFGENIE_ARCHIVE s3://awspds.refgenie.databio.org/btref.databio.org/ --profile refgenie
 ```
 
 ## Step 6. Deploy server 

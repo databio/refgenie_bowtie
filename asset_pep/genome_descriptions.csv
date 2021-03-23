@@ -1,5 +1,35 @@
-sample_name,genome_description
-hg38-fasta-default,hg38 descriptipon
-hg19-fasta-default,hg19 description
-mm10-fasta-default,mm10 description
-hg38_chr22-fasta-default,hg38 just chr 22.
+sample_name,genome_description,species_build,source
+GRCh38_noalt_as-fasta-default,Human / GRCh38 no-alt analysis set,Human / GRCh38 no-alt analysis set,NCBI
+GRCh38_noalt_decoy_as-fasta-default,Human / GRCh38 no-alt +decoy set,Human / GRCh38 no-alt +decoy set,NCBI
+grch38_1kgmaj-fasta-default,Human / GRCh38 + major SNVs,Human / GRCh38 + major SNVs,NCBI
+chm13.draft_v1.0_plusY-fasta-default,Human / CHM13plusY,Human / CHM13plusY,NCBI+1KG
+GRCh37-fasta-default,Human / GRCh37,Human / GRCh37,T2T
+Ash1_v2.0-fasta-default,Human / Ash2.0,Human / Ash2.0,JHU
+Ash1v1.7-fasta-default,Human / Ash1.7,Human / Ash1.7,JHU
+hg19-fasta-default,Human / hg19,Human / hg19,UCSC
+hg18-fasta-default,Human / hg18,Human / hg18,UCSC
+GRCm38-fasta-default,Mouse / GRCm38,Mouse / GRCm38,NCBI
+GRCm39-fasta-default,Mouse / GRCm39,Mouse / GRCm39,NCBI
+mm10-fasta-default,Mouse / mm10,Mouse / mm10,UCSC
+mm9-fasta-default,Mouse / mm9,Mouse / mm9,UCSC
+Clint_PTRv2-fasta-default,Chimpanzee / Clint_PTRv2,Chimpanzee / Clint_PTRv2,NCBI
+CHIMP2.1.4-fasta-default,Chimpanzee / CHIMP2.1.4,Chimpanzee / CHIMP2.1.4,Ensembl
+Mmul_10-fasta-default,Rhesus macaque / MMul_10,Rhesus macaque / MMul_10,Ensembl
+ARS-UCD1.2-fasta-default,Cow / ARS-UCD1.2,Cow / ARS-UCD1.2,NCBI
+Sscrofa11.1-fasta-default,Pig / Sscrofa11.1,Pig / Sscrofa11.1,NCBI
+CanFam3.1-fasta-default,Dog / CanFam3.1,Dog / CanFam3.1,Ensembl
+canfam4-fasta-default,Dog / CanFam4,Dog / CanFam4,NCBI
+rn4-fasta-default,Rat / rn4,Rat / rn4,UCSC
+Rnor_6.0-fasta-default,Rat / Rnor6.0,Rat / Rnor6.0,NCBI
+GRCg6a-fasta-default,Chicken / GRCg6a,Chicken / GRCg6a,NCBI
+Galgal4-fasta-default,Chicken / Galgal4,Chicken / Galgal4,Ensembl
+GRCz11-fasta-default,Zebrafish / GRCz11,Zebrafish / GRCz11,NCBI
+GRCz10-fasta-default,Zebrafish / GRCz10,Zebrafish / GRCz10,NCBI
+AGPv4-fasta-default,Corn / AGPv4,Corn / AGPv4,Ensembl
+Zm-B73-REFERENCE-NAM-5.0-fasta-default,Corn / B73 RefGenV5,Corn / B73 RefGenV5,NCBI
+Build_4.0-fasta-default,Oryza sativa (rice) / Build_4.0,Oryza sativa (rice) / Build_4.0,NCBI
+TAIR10-fasta-default,Arabidopsis thaliana / TAIR10,Arabidopsis thaliana / TAIR10,Ensembl
+BDGP6-fasta-default,Fruitfly / BDGP6,Fruitfly / BDGP6,Ensembl
+Dmel_A4_1.0-fasta-default,Fruitfly / Dmel A4 1.0,Fruitfly / Dmel A4 1.0,NCBI
+WBcel235-fasta-default,C. elegans / WBcel235,C. elegans / WBcel235,Ensembl
+R64-1-1-fasta-default,Yeast / R64-1-1,Yeast / R64-1-1,Ensembl
