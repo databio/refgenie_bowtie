@@ -162,3 +162,6 @@ genomes:
 remote_url_base: http://awspds.refgenie.databio.org/refgenomes.databio.org/
 genome_archive_folder: /home/nsheff/refgenie_test/genomes/archive
 genome_archive_config: refgenie_config_archive.yaml
+remotes:
+  http: http://awspds.refgenie.databio.org/refgenomes.databio.org/
+  
