@@ -11,7 +11,7 @@ command_template: >
       checksum=`{'md5sum ' + sample.local_input + sample.input_id[loop.index0] + ' | cut -c -32'}`;
       if [[ "{sample.md5[loop.index0]}" != $checksum ]]; then
         echo -e "\e[1;31mERROR: checksums don't match\e[0m: {sample.md5[loop.index0]}, $checksum"
-        rm {sample.local_input + sample.input_id[loop.index0]}
+  #      rm {sample.local_input + sample.input_id[loop.index0]}
         exit 1
       else
         echo -e "checksums match: $checksum";

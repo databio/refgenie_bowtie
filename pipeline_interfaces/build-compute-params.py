@@ -12,7 +12,7 @@ parser.add_argument("-g", "--genome", type=str, help="genome", required=True)
 args = parser.parse_args()
 
 params =   {
-    "bulker_crate": "databio/refgenie:0.7.6",
+    "bulker_crate": "databio/refgenie:0.7.7",
     "mem": "24000",
     "cores": "1",
     "partition": "largemem",
