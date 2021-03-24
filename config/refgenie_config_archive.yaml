@@ -1,5 +1,5 @@
 config_version: 0.4
-genome_folder: /home/nsheff/refgenie_test/genomes
+genome_folder: /project/shefflab//deploy/btref.databio.org/genomes
 genome_servers: 
  - http://refgenomes.databio.org
 genomes:
@@ -16,149 +16,37 @@ genomes:
               fai: 2230c535660fb4774114bfa966a62f823fdb6d21acf138d4.fa.fai
               chrom_sizes: 2230c535660fb4774114bfa966a62f823fdb6d21acf138d4.chrom.sizes
             asset_parents: []
-            asset_children: 
-             - 2230c535660fb4774114bfa966a62f823fdb6d21acf138d4/bowtie2_index:default
-            archive_digest: 9b147907be671a626f406d96abb12ca8
+            archive_digest: 8ae4a7caed85983b67af6de485564466
             archive_size: 833.4MB
             asset_size: 2.9GB
-            legacy_archive_digest: bb30f1de484691acbf31d67e2c666c2d
-        default_tag: default
-      bowtie2_index:
-        asset_description: Genome index for bowtie, produced with bowtie-build
-        tags:
-          default:
-            asset_path: bowtie2_index
-            asset_digest: 04880a3192a69bbfdc36da25b67203cb
-            seek_keys:
-              bowtie2_index: 2230c535660fb4774114bfa966a62f823fdb6d21acf138d4
-            asset_parents: 
-             - 2230c535660fb4774114bfa966a62f823fdb6d21acf138d4/fasta:default
-            archive_digest: a9f3db51db616f07917a8d355a2e1116
-            archive_size: 3.5GB
-            asset_size: 3.9GB
             asset_children: []
-            legacy_archive_digest: b7fc6da6db0eb29f31ccdd76a9ce1767
+            legacy_archive_digest: 0fb8cc6b57dd969652915eeb9aaf0d43
         default_tag: default
     aliases: 
-     - hg38
-    genome_description: hg38 descriptipon
-  baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c:
+     - GRCh38_noalt_as
+    genome_description: Human / GRCh38 no-alt analysis set
+  a735e331b2a8ae5cd4e7519575c4c09426a276175c57bd79:
     assets:
       fasta:
         asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
         tags:
           default:
             asset_path: fasta
-            asset_digest: 7ce3b03e30d6ef76af8c3ad09a141dfc
+            asset_digest: 3701eaccf6e8b6637a8b8384abfdc052
             seek_keys:
-              fasta: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c.fa
-              fai: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c.fa.fai
-              chrom_sizes: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c.chrom.sizes
+              fasta: a735e331b2a8ae5cd4e7519575c4c09426a276175c57bd79.fa
+              fai: a735e331b2a8ae5cd4e7519575c4c09426a276175c57bd79.fa.fai
+              chrom_sizes: a735e331b2a8ae5cd4e7519575c4c09426a276175c57bd79.chrom.sizes
             asset_parents: []
-            asset_children: 
-             - baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c/bowtie2_index:default
-            archive_digest: a3c0c7fd834274d3ba91947bc888df58
-            archive_size: 905.3MB
-            asset_size: 3.0GB
-            legacy_archive_digest: 12d605379497bb2e6b6b0a8c745483ec
-        default_tag: default
-      bowtie2_index:
-        asset_description: Genome index for bowtie, produced with bowtie-build
-        tags:
-          default:
-            asset_path: bowtie2_index
-            asset_digest: 6d7b0d35fa090a2d1d93f4e6c68dbe33
-            seek_keys:
-              bowtie2_index: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c
-            asset_parents: 
-             - baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c/fasta:default
-            archive_digest: 779dac9b0171184d4eb79ff6b7e2c0a9
-            archive_size: 3.5GB
-            asset_size: 3.8GB
+            archive_digest: f156287097fa64b6234895a3558cdd2b
+            archive_size: 835.0MB
+            asset_size: 2.9GB
             asset_children: []
-            legacy_archive_digest: 8bac52d23add3e1646101782328253b4
+            legacy_archive_digest: 14649e403430788b6bcdff10ddd159ce
         default_tag: default
     aliases: 
-     - hg19
-    genome_description: hg19 description
-  fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7:
-    assets:
-      fasta:
-        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
-        tags:
-          default:
-            asset_path: fasta
-            asset_digest: f197c1ac4b3e4c5dd013bd2021bb32e6
-            seek_keys:
-              fasta: fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7.fa
-              fai: fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7.fa.fai
-              chrom_sizes: fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7.chrom.sizes
-            asset_parents: []
-            asset_children: 
-             - fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7/bowtie2_index:default
-            archive_digest: ed2d4b16ffe309372a15e36f3b820678
-            archive_size: 11.7MB
-            asset_size: 41.4MB
-            legacy_archive_digest: 704213b3a136750e6933dd99bb53a76d
-        default_tag: default
-      bowtie2_index:
-        asset_description: Genome index for bowtie, produced with bowtie-build
-        tags:
-          default:
-            asset_path: bowtie2_index
-            asset_digest: f756f8dd195756b78e2f9dfbb9146fcf
-            seek_keys:
-              bowtie2_index: fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7
-            asset_parents: 
-             - fec6bcce9821b57f98ffc5d46ebec4f2f756c2e9db800ab7/fasta:default
-            archive_digest: 2374e9a400dc32f709835a9ed27d0848
-            archive_size: 52.6MB
-            asset_size: 65.7MB
-            asset_children: []
-            legacy_archive_digest: a6f1a77a8d3baddb3ad0bb8960c8b298
-        default_tag: default
-    aliases: 
-     - hg38_chr22
-    genome_description: hg38 just chr 22.
-  0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1:
-    assets:
-      fasta:
-        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
-        tags:
-          default:
-            asset_path: fasta
-            asset_digest: 4afce2deeceae65b4c0987b9297cf441
-            seek_keys:
-              fasta: 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1.fa
-              fai: 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1.fa.fai
-              chrom_sizes: 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1.chrom.sizes
-            asset_parents: []
-            asset_children: 
-             - 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1/bowtie2_index:default
-            archive_digest: a6db24a2001960f7379b07687a74f426
-            archive_size: 763.4MB
-            asset_size: 2.6GB
-            legacy_archive_digest: 333ea3c7a315362da86763631aafb837
-        default_tag: default
-      bowtie2_index:
-        asset_description: Genome index for bowtie, produced with bowtie-build
-        tags:
-          default:
-            asset_path: bowtie2_index
-            asset_digest: 5263d8e0dde91c66f3044e18f4f4f31c
-            seek_keys:
-              bowtie2_index: 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1
-            asset_parents: 
-             - 0f10d83b1050c08dd53189986f60970b92a315aa7a16a6f1/fasta:default
-            archive_digest: fcef519a6e61fb80c804c3e30257699c
-            archive_size: 3.1GB
-            asset_size: 3.5GB
-            asset_children: []
-            legacy_archive_digest: 724e76406f23ad68f1792e5cc271323c
-        default_tag: default
-    aliases: 
-     - mm10
-    genome_description: mm10 description
+     - GRCh38_noalt_decoy_as
+    genome_description: Human / GRCh38 no-alt +decoy set
 remote_url_base: http://awspds.refgenie.databio.org/refgenomes.databio.org/
-genome_archive_folder: /home/nsheff/refgenie_test/genomes/archive
+genome_archive_folder: /project/shefflab//deploy/btref.databio.org/genomes/archive
 genome_archive_config: refgenie_config_archive.yaml
