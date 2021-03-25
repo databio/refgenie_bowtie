@@ -37,6 +37,261 @@ genomes:
     aliases: 
      - GRCh38_noalt_decoy_as
     genome_description: Human / GRCh38 no-alt +decoy set
+  acde9aa51951eae5298ed8364f2350271b07b362bf73ec44:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 554381dafb223e10cfc0d50533ea3e62
+            seek_keys:
+              fasta: acde9aa51951eae5298ed8364f2350271b07b362bf73ec44.fa
+              fai: acde9aa51951eae5298ed8364f2350271b07b362bf73ec44.fa.fai
+              chrom_sizes: acde9aa51951eae5298ed8364f2350271b07b362bf73ec44.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - grch38_1kgmaj
+    genome_description: Human / GRCh38 + major SNVs
+  1089bd6488a8b2f1b44a4469df92197bf8e5749b95ad0d3c:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 4d848324ae74da51ddb95e6680aebdd4
+            seek_keys:
+              fasta: 1089bd6488a8b2f1b44a4469df92197bf8e5749b95ad0d3c.fa
+              fai: 1089bd6488a8b2f1b44a4469df92197bf8e5749b95ad0d3c.fa.fai
+              chrom_sizes: 1089bd6488a8b2f1b44a4469df92197bf8e5749b95ad0d3c.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - GRCh37
+    genome_description: Human / GRCh37
+  baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 7ce3b03e30d6ef76af8c3ad09a141dfc
+            seek_keys:
+              fasta: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c.fa
+              fai: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c.fa.fai
+              chrom_sizes: baa91c8f6e2780cfd8fd1040ff37f51c379947a2a4820d6c.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - hg19
+    genome_description: Human / hg19
+  9b7fd88cae1bd01bf53760fb426e2aeb299150cc64af2b01:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 0fc1d00b994befc9a00695b15b048af8
+            seek_keys:
+              fasta: 9b7fd88cae1bd01bf53760fb426e2aeb299150cc64af2b01.fa
+              fai: 9b7fd88cae1bd01bf53760fb426e2aeb299150cc64af2b01.fa.fai
+              chrom_sizes: 9b7fd88cae1bd01bf53760fb426e2aeb299150cc64af2b01.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - hg18
+    genome_description: Human / hg18
+  9352d96b12bcb5d843523a68321509d2bb7a967363a138d9:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 3d7e9b696b0f531d542cd344955c4906
+            seek_keys:
+              fasta: 9352d96b12bcb5d843523a68321509d2bb7a967363a138d9.fa
+              fai: 9352d96b12bcb5d843523a68321509d2bb7a967363a138d9.fa.fai
+              chrom_sizes: 9352d96b12bcb5d843523a68321509d2bb7a967363a138d9.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - Clint_PTRv2
+    genome_description: Chimpanzee / Clint_PTRv2
+  cc74de5f7b89a8798fe419ce38b63b6d3c8d9b641b75a090:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 374b5d3584a393edbcb421d2a453f502
+            seek_keys:
+              fasta: cc74de5f7b89a8798fe419ce38b63b6d3c8d9b641b75a090.fa
+              fai: cc74de5f7b89a8798fe419ce38b63b6d3c8d9b641b75a090.fa.fai
+              chrom_sizes: cc74de5f7b89a8798fe419ce38b63b6d3c8d9b641b75a090.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - Mmul_10
+    genome_description: Rhesus macaque / MMul_10
+  72155448896ecc9e953de0eadf4fec8cbedf0e5250d9f15a:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: b19f47d3975c65dfde7d88035da1792f
+            seek_keys:
+              fasta: 72155448896ecc9e953de0eadf4fec8cbedf0e5250d9f15a.fa
+              fai: 72155448896ecc9e953de0eadf4fec8cbedf0e5250d9f15a.fa.fai
+              chrom_sizes: 72155448896ecc9e953de0eadf4fec8cbedf0e5250d9f15a.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - canfam4
+    genome_description: Dog / CanFam4
+  f4deaddd4439a957d2bd1feb0b3a1d1f4e10cc04b302b3ed:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 560c052c2d800f7df4bf56d8052041a1
+            seek_keys:
+              fasta: f4deaddd4439a957d2bd1feb0b3a1d1f4e10cc04b302b3ed.fa
+              fai: f4deaddd4439a957d2bd1feb0b3a1d1f4e10cc04b302b3ed.fa.fai
+              chrom_sizes: f4deaddd4439a957d2bd1feb0b3a1d1f4e10cc04b302b3ed.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - GRCg6a
+    genome_description: Chicken / GRCg6a
+  403159b0484c7d8a3f7dd9e4077c7996ea9537c52c0e0e8e:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 6d8dabea1b6d4e1fb31f355f75dcd53b
+            seek_keys:
+              fasta: 403159b0484c7d8a3f7dd9e4077c7996ea9537c52c0e0e8e.fa
+              fai: 403159b0484c7d8a3f7dd9e4077c7996ea9537c52c0e0e8e.fa.fai
+              chrom_sizes: 403159b0484c7d8a3f7dd9e4077c7996ea9537c52c0e0e8e.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - Galgal4
+    genome_description: Chicken / Galgal4
+  3ddcd6d8f3f2d703c9350c508c58b26427fa5486b54e5640:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: a8265a8ca2ecf6c12180188f4aba430d
+            seek_keys:
+              fasta: 3ddcd6d8f3f2d703c9350c508c58b26427fa5486b54e5640.fa
+              fai: 3ddcd6d8f3f2d703c9350c508c58b26427fa5486b54e5640.fa.fai
+              chrom_sizes: 3ddcd6d8f3f2d703c9350c508c58b26427fa5486b54e5640.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - GRCz11
+    genome_description: Zebrafish / GRCz11
+  a84305bed3fc289af5d81338e0efd653a13478e2441652f9:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: e6f8922fed6e1f13f43955c8404672a5
+            seek_keys:
+              fasta: a84305bed3fc289af5d81338e0efd653a13478e2441652f9.fa
+              fai: a84305bed3fc289af5d81338e0efd653a13478e2441652f9.fa.fai
+              chrom_sizes: a84305bed3fc289af5d81338e0efd653a13478e2441652f9.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - GRCz10
+    genome_description: Zebrafish / GRCz10
+  b31a936fad02ccf498f4a9a135655e098e54d0dcc652e4bd:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 3b54190c8136b13758fb8a13a74c58aa
+            seek_keys:
+              fasta: b31a936fad02ccf498f4a9a135655e098e54d0dcc652e4bd.fa
+              fai: b31a936fad02ccf498f4a9a135655e098e54d0dcc652e4bd.fa.fai
+              chrom_sizes: b31a936fad02ccf498f4a9a135655e098e54d0dcc652e4bd.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - AGPv4
+    genome_description: Corn / AGPv4
+  4a437dfe54d09e27fde78cc1052269ed254cf9d04cc130a9:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: d8a0293ac87d379b8ee9946d37f3c38a
+            seek_keys:
+              fasta: 4a437dfe54d09e27fde78cc1052269ed254cf9d04cc130a9.fa
+              fai: 4a437dfe54d09e27fde78cc1052269ed254cf9d04cc130a9.fa.fai
+              chrom_sizes: 4a437dfe54d09e27fde78cc1052269ed254cf9d04cc130a9.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - TAIR10
+    genome_description: Arabidopsis thaliana / TAIR10
+  1bb1abe48217b62d3e827ee21c3a4b8477cde2759d08b4bd:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: 843ed09a496e335c925d1e39f4869255
+            seek_keys:
+              fasta: 1bb1abe48217b62d3e827ee21c3a4b8477cde2759d08b4bd.fa
+              fai: 1bb1abe48217b62d3e827ee21c3a4b8477cde2759d08b4bd.fa.fai
+              chrom_sizes: 1bb1abe48217b62d3e827ee21c3a4b8477cde2759d08b4bd.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - WBcel235
+    genome_description: C. elegans / WBcel235
+  8d564d7a062f5cdf67c818983a9515736ad16b8fd1f18696:
+    assets:
+      fasta:
+        asset_description: DNA sequences in the FASTA format, indexed FASTA (produced with samtools index) and chromosome sizes file
+        tags:
+          default:
+            asset_path: fasta
+            asset_digest: afeac4ac1a0bebb7b67b9c30c4490737
+            seek_keys:
+              fasta: 8d564d7a062f5cdf67c818983a9515736ad16b8fd1f18696.fa
+              fai: 8d564d7a062f5cdf67c818983a9515736ad16b8fd1f18696.fa.fai
+              chrom_sizes: 8d564d7a062f5cdf67c818983a9515736ad16b8fd1f18696.chrom.sizes
+            asset_parents: []
+        default_tag: default
+    aliases: 
+     - R64-1-1
+    genome_description: Yeast / R64-1-1
 remote_url_base: http://awspds.refgenie.databio.org/refgenomes.databio.org/
 genome_archive_folder: /project/shefflab//deploy/btref.databio.org/genomes/archive
 genome_archive_config: refgenie_config_archive.yaml
