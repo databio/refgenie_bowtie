@@ -1,4 +1,4 @@
-FROM databio/refgenieserver:staging
+FROM databio/refgenieserver
 
 COPY config/refgenie_config_archive.yaml /genome_config.yaml
 
