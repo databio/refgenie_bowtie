@@ -369,13 +369,12 @@ genomes:
     aliases: 
      - R64-1-1
     genome_description: Yeast / R64-1-1
-remote_url_base: http://awspds.refgenie.databio.org/refgenomes.databio.org/
 genome_archive_folder: /project/shefflab//deploy/btref.databio.org/genomes/archive
 genome_archive_config: refgenie_config_archive.yaml
 remotes:
   http:
-    prefix: http://awspds.refgenie.databio.org/rg.databio.org/
+    prefix: http://awspds.refgenie.databio.org/refgenomes.databio.org/
     description: This is an HTTP compatible endpoint
   s3:
-    prefix: s3://awspds.refgenie.databio.org/rg.databio.org/
+    prefix: s3://awspds.refgenie.databio.org/refgenomes.databio.org/
     description: This is an S3 compatible endpoint
